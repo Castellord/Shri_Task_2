@@ -1,0 +1,86 @@
+.side-block {
+    width: 630px;
+}
+
+.side-block_left {
+    float: left;
+    margin-left: 40px;
+}
+
+.side-block__heading {
+    float: left;
+    margin: 29px 0 19px -1px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333333;
+}
+
+.main-data {
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 330px;
+    box-sizing: border-box;
+    padding: 26px 25px 0 25px;
+    background: url(../img/bg@2x.png);
+    background-size: cover;
+}
+
+.main-data__heading {
+    margin: 0px;
+    font-size: 27px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.main-data__caption {
+    font-size: 14px;
+    color: #333333;
+    margin: 5px 0 0 0;
+}
+
+.temp-short {
+    display: inline-block;
+    list-style: none;
+    font-size: 14px;
+    color: #858585;
+    margin: 25px 15px 0 0;
+}
+
+.temp-short__item {
+    display: block;
+    margin-top: 4px;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 36px;
+    color: #333333;
+}
+
+.temp-short__icon {
+    width: 26px;
+    margin-left: -5px;
+}
+
+.favor-cards {
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    width: 200px;
+    height: 330px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    overflow-y: scroll;
+}
+
+.arrow-reminder {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    z-index: 5;
+    bottom: 10px;
+    right: 114px;
+}
+
+.arrow-reminder_inactive {
+    display: none;
+}

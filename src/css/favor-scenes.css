@@ -1,0 +1,14 @@
+.side-block_right {
+    float: right;
+    margin-right: 40px;
+}
+
+.favor-scene {
+    width: 654px;
+    height: 345px;
+    overflow-x: scroll;
+    column-width: 645px;
+    -moz-column-width: 645px;
+    column-gap: 0px;
+    column-fill: auto;
+}

@@ -1,0 +1,60 @@
+.card {
+    float: left;
+    position: relative;
+    width: 200px;
+    height: 120px;
+    margin: 0 15px 15px 0;
+    box-sizing: border-box;
+    padding: 15px;
+    background: #f7f7f7;
+    border-radius: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.50);
+}
+
+.card_small {
+    height: 100px;
+}
+
+.card__review {
+    position: absolute;
+    bottom: 13px;
+    padding-right: 15px;
+    font-size: 12px;
+    color: #858585;
+}
+
+.card__heading {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    color: #333333;
+    line-height: 1.2em;
+}
+
+.card__text {
+    display: block;
+    padding: 4px 0px 2px 0px;
+}
+
+.card__icon {
+    width: 24px;
+    position: absolute;
+    top: 14px;
+    left: 14px;
+}
+
+.card_horisontal-scroll {
+    display: none;
+    float: none;
+    white-space: normal;
+    margin: 0px 16px 0px 0px;
+    word-spacing: normal;
+}
+
+.card_horisontal-filter-show {
+    display: inline-block;
+}

@@ -1,0 +1,37 @@
+.scroll-control {
+    float: right;
+    position: relative;
+    margin: 29px 0px 0 0;
+}
+
+.scroll-control__next {
+    position: absolute;
+    right: -3px;
+    transform: rotate(180deg);
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.scroll-control__prev {
+    position: absolute;
+    right: 28px;
+    top: 3px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.favor-devices__controls {
+    margin: 21px 40px 0px 0;
+}
+
+.svg-scroll-arrow {
+    fill: #a2a2a2;
+}
+
+.svg-scroll-arrow_active {
+    fill: #000000;
+}

@@ -1,0 +1,29 @@
+.select-filter {
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+.select-filter__item {
+    float: left;
+    margin: 12px 11px 0 0;
+    padding: 7px 11px 8px 15px;
+    cursor: pointer;
+    outline: none;
+    background: #f7f7f7;
+    border: none;
+    border-radius: 20px;
+    font-size: 13px;
+    font-family: Arial;
+    color: #000000;
+    font-weight: bold;
+}
+
+.select-filter__item_active {
+    background: #FFD93E;
+}
+
+.select-filter__item:focus {
+    border: none;
+    outline: none;
+}

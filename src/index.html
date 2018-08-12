@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/main.js"></script>
+</head>
+
+
+
+<body>
+
+
+
+    //= templates/modal-round.html
+    <!-- -->
+    //= templates/modal-temperature.html
+    <!-- -->
+    //= templates/modal-lamp.html
+
+
+
+    <div class="wrap">
+        <div class="content">
+            //= templates/header.html
+
+
+
+            <div class="side-block side-block_left">
+
+                <h2 class="side-block__heading side-block__heading_maindata">
+                    Главное
+                </h2>
+                <div class="main-data">
+
+                    <img class="arrow-reminder" src="./img/M@2x.png">
+
+                    <div class="favor-cards favor-cards_no-padding">
+
+                        <!-- -->
+                        //= templates/main-data-cards.html
+                    </div>
+                </div>
+
+                <h3 class="main-data__heading">
+                    Привет, Геннадий!
+                </h3>
+                <p class="main-data__caption">
+                    Двери и окна закрыты, сигнализация включена.
+                </p>
+
+                <div class="temp-short">
+                    Дома
+                    <em class="temp-short__item">+23</em>
+                </div>
+                <div class="temp-short">
+                    За окном
+                    <em class="temp-short__item">+19
+                            <img class="temp-short__icon" src="./img/cloud-drizzle@2x.png">
+                        </em>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="side-block side-block_right">
+            <h2 class="side-block__heading">
+                Избранные сценарии
+            </h2>
+
+            //= templates/scroll-control.html
+
+            <div class="favor-scene scroll-block" data-controls="favor-scene__controls">
+
+                //= templates/favor-scene-cards.html
+
+            </div>
+        </div>
+
+        <div class="device-filter select-filter">
+            <h2 class="device-filter__heading">Избранные устройства</h2>
+            //= templates/scroll-control-bottom.html
+            <div class="device-filter__wrap">
+                <button class="device-filter__item device-filter__item_active select-filter__item select-filter__item_active" onclick="filterSelection('all')">Все</button>
+                <button class="device-filter__item select-filter__item" onclick="filterSelection('card_kitchen')"> Кухня</button>
+                <button class="device-filter__item select-filter__item" onclick="filterSelection('card_hall')"> Зал</button>
+                <button class="device-filter__item select-filter__item" onclick="filterSelection('card_lamp')"> Лампочки</button>
+                <button class="device-filter__item select-filter__item" onclick="filterSelection('card_camera')"> Камеры</button>
+            </div>
+        </div>
+
+        <div class="favor-devices scroll-block" data-controls="favor-devices__controls" offset="74">
+
+            //= templates/favor-device-cards.html
+
+        </div>
+
+
+
+    </div>
+
+    <footer>
+        <menu class="footer-menu">
+            <a class="footer-menu__link">Помощь</a>
+            <a class="footer-menu__link">Обратная связь</a>
+            <a class="footer-menu__link">Разработчикам</a>
+            <a class="footer-menu__link">Условия использования</a>
+        </menu>
+    </footer>
+    </div>
+
+
+
+
+</body>
+
+
+</html>

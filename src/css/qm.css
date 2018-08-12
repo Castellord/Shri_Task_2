@@ -1,0 +1,191 @@
+@media all and (max-width: 500px) {
+    .wrap {
+        width: 375px;
+    }
+    header {
+        height: 67px;
+        padding: 0 20px;
+        border-bottom: 0px;
+    }
+    .header-logo {
+        margin: 21px 52px 0 0;
+    }
+    .header-menu {
+        display: none;
+    }
+    .side-block_left {
+        margin-left: 20px;
+    }
+    .side-block__heading_maindata {
+        display: none;
+    }
+    .side-block {
+        width: 335px;
+    }
+    .main-data {
+        padding: 21px 25px 0 20px;
+        height: 282px;
+        border-radius: 20px;
+    }
+    .main-data__heading {
+        font-size: 18px;
+    }
+    .main-data__caption {
+        font-size: 12px;
+    }
+    .temp-short {
+        margin: 15px 15px 0 0;
+    }
+    .temp-short__icon {
+        width: 21px;
+        margin-left: -4px;
+        margin-bottom: -3px;
+    }
+    .favor-cards {
+        position: absolute;
+        bottom: 20px;
+        right: 0px;
+        width: 100%;
+        height: 120px;
+        box-sizing: border-box;
+        padding-top: 0px;
+        padding-left: 20px;
+        white-space: nowrap;
+        overflow-y: auto;
+        overflow-x: scroll;
+    }
+    .card_main-data {
+        float: none;
+        white-space: normal;
+        display: inline-block;
+        margin-bottom: 0px;
+    }
+    .temp-short {
+        font-size: 12px;
+    }
+    .temp-short__item {
+        font-size: 24px;
+    }
+    .side-block_right {
+        box-sizing: border-box;
+        padding-left: 20px;
+    }
+    .side-block__heading {
+        margin: 31px 0 18px 0px;
+    }
+    .favor-scene {
+        width: 355px;
+        height: 105px;
+        columns: auto auto !important;
+        white-space: nowrap;
+        padding-left: 20px;
+        margin-left: -20px;
+    }
+    .card_small {
+        float: none;
+        display: inline-block;
+        white-space: normal;
+        margin: 0 10px 0px 0;
+    }
+    .scroll-control {
+        display: none;
+    }
+    .device-filter {
+        position: relative;
+        padding: 5px 0 0 20px;
+        margin-bottom: 19px;
+    }
+    .device-filter__wrap {
+        position: absolute;
+        right: 0px;
+        top: 2px;
+        background: #ffffff;
+        z-index: 1;
+        padding: 0px 9px 15px 0px;
+    }
+    .device-filter__item {
+        float: right;
+        display: none;
+    }
+    .device-filter__item_show {
+        display: block;
+    }
+    .device-filter__item_active {
+        display: block;
+        margin-right: 0px;
+    }
+    .favor-devices {
+        width: 375px;
+        padding: 0px 0 0 20px;
+    }
+    .footer-menu {
+        padding-left: 20px;
+    }
+    .modal-wrap,
+    .modal-wrap_active {
+        display: block;
+    }
+    .modal-wrap_active {
+        overflow-y: scroll;
+    }
+    .modal-window {
+        width: 375px;
+        margin: 0 auto;
+    }
+    .modal-window__content {
+        width: 335px;
+        margin: 20px 0px 0px 20px;
+        padding: 20px;
+    }
+    .modal-window__heading {
+        font-size: 18px;
+        margin-bottom: 1px;
+    }
+    .modal-window__review {
+        font-size: 12px;
+    }
+    .modal__icon {
+        display: none;
+    }
+    .modal-filter {
+        margin-left: -20px;
+        box-sizing: border-box;
+        padding-left: 20px;
+        white-space: nowrap;
+        overflow-x: scroll;
+        width: 335px;
+        font-weight: normal;
+        margin-top: 3px;
+    }
+    .modal-filter__item {
+        float: none;
+        display: inline-block;
+        margin-right: 6px;
+    }
+    .select-range {
+        transform: rotate(-90deg);
+        width: 336px;
+    }
+    input[type=range].select-range::after {
+        margin-left: 289px;
+    }
+    input[type=range].select-range_temperature::before {
+        transform: rotate(90deg);
+        margin: 17px -2px;
+    }
+    input[type=range].select-range_temperature::after {
+        transform: rotate(90deg);
+        margin: 12px 284px;
+    }
+    input[type=range].select-range {
+        width: 336px;
+        margin: 138px 0 143px -21px;
+    }
+    .modal-controls__button {
+        width: 335px;
+        margin: 15px 0px 0px 20px;
+    }
+    .arrow-reminder {
+        display: none
+    }
+}

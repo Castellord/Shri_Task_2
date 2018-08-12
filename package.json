@@ -1,0 +1,28 @@
+{
+    "name": "task2",
+    "version": "1.0.0",
+    "description": "Yandex SHRI Task2",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Egor Gugaev",
+    "license": "ISC",
+    "dependencies": {
+        "babel-core": "^6.26.3",
+        "babel-preset-env": "^1.7.0",
+        "browser-sync": "^2.24.6",
+        "css": "^2.2.3",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^5.0.0",
+        "gulp-babel": "^7.0.1",
+        "gulp-clean-css": "^3.10.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-connect": "^5.5.0",
+        "gulp-minify": "^3.1.0",
+        "gulp-rigger": "^0.5.8",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-uglify": "^3.0.1",
+        "gulp-watch": "^5.0.1"
+    }
+}
