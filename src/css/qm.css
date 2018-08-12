@@ -166,16 +166,21 @@
         transform: rotate(-90deg);
         width: 336px;
     }
-    input[type=range].select-range::after {
-        margin-left: 289px;
+    .select-range__wrap::before {
+        left: 129px;
+        bottom: 17px;
     }
-    input[type=range].select-range_temperature::before {
-        transform: rotate(90deg);
-        margin: 17px -2px;
+    .select-range__wrap::after {
+        right: 129px;
+        bottom: 292px
     }
-    input[type=range].select-range_temperature::after {
-        transform: rotate(90deg);
-        margin: 12px 284px;
+    .select-range__wrap_temp::before {
+        left: 133px;
+        bottom: 3px;
+    }
+    .select-range__wrap_temp::after {
+        right: 126px;
+        bottom: 288px;
     }
     input[type=range].select-range {
         width: 336px;

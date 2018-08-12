@@ -7,53 +7,57 @@ input[type=range].select-range {
     outline-style: none;
 }
 
-input[type=range].select-range::before {
+.select-range__wrap {
+    position: relative;
+}
+
+.select-range__wrap::before {
     content: "";
     position: absolute;
     cursor: pointer;
     width: 37px;
-    margin-top: 11px;
+    left: 12px;
+    bottom: 16px;
     z-index: 5;
-    margin-left: 11px;
     height: 37px;
-    background: url(http://localhost:8080/css/../img/icon_sun_min.png);
+    background: url(../img/icon_sun_min.png);
     background-size: contain;
 }
 
-input[type=range].select-range::after {
+.select-range__wrap::after {
     content: "";
     position: absolute;
     cursor: pointer;
     width: 37px;
-    margin-top: 13px;
+    right: 16px;
+    bottom: 16px;
     z-index: 5;
-    margin-left: 527px;
     height: 37px;
-    background: url(http://localhost:8080/css/../img/icon_sun_max.png);
+    background: url(../img/icon_sun_max.png);
     background-size: contain;
 }
 
-input[type=range].select-range_temperature::before {
+.select-range__wrap_temp::before {
     content: "-10";
     background: none;
-    display: block;
-    margin: 21px 21px;
     font-style: normal;
     font-size: 18px;
     color: #ffffff;
     font-weight: bold;
+    left: 23px;
+    bottom: 7px;
 }
 
-input[type=range].select-range_temperature::after {
+.select-range__wrap_temp::after {
     content: "+30";
     position: absolute;
     background: none;
-    display: block;
-    margin: 20px 526px;
     font-style: normal;
     font-size: 18px;
     color: #ffffff;
     font-weight: bold;
+    bottom: 7px;
+    right: 14px;
 }
 
 .select-range__label {

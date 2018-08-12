@@ -33,10 +33,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // add glow to 'active' ticks
-        const actives = (Math.floor(angle / 2.381));
-        for (let tick of ticks.slice(0, actives)) {
-            tick.classList.add('active');
+        const actives = (Math.round(angle / 3 - 1));
+        console.log(actives);
+        if (actives <= 0) {
+            for (let tick of ticks.slice(0, 1)) {
+                tick.classList.add('active');
+            }
+        } else {
+            for (let tick of ticks.slice(0, actives)) {
+                tick.classList.add('active');
+            }
         }
+
+
 
         // update % value as text
         curr.innerHTML = `+${Math.ceil(maxtemp/100*(Math.round(angle/max*100)))}`;
