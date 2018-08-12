@@ -3,7 +3,7 @@
     width: 178px;
     height: 178px;
     border-radius: 50%;
-    margin: 34px auto 3px;
+    margin: 44px auto 20px;
 }
 
 .knob__control {
@@ -35,6 +35,8 @@
     z-index: 11;
     top: 47px;
     left: 25px;
+    width: 120px;
+    text-align: center;
 }
 
 .tick {

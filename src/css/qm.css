@@ -186,11 +186,17 @@
         width: 336px;
         margin: 138px 0 143px -21px;
     }
+    .modal-controls {
+        margin-bottom: 40px;
+    }
     .modal-controls__button {
         width: 335px;
         margin: 15px 0px 0px 20px;
     }
     .arrow-reminder {
         display: none
+    }
+    .knob {
+        margin: 122px auto 112px;
     }
 }
