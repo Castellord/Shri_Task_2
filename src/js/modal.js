@@ -11,28 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-    function closeModal() {
-        document.getElementsByClassName('modal-wrap_active')[0].classList.remove('modal-wrap_active');
-        document.getElementsByClassName('blur')[0].classList.remove('blur');
-        document.body.style.overflow = "auto";
-    }
-
-    const keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
-
-    function preventDefault(e) {
-        e = e || window.event;
-        if (e.preventDefault)
-            e.preventDefault();
-        e.returnValue = false;
-    }
-
-    function preventDefaultForScrollKeys(e) {
-        if (keys[e.keyCode]) {
-            preventDefault(e);
-            return false;
-        }
-    }
-
-
 }, false);
+
+
+function closeModal() {
+    document.getElementsByClassName('modal-wrap_active')[0].classList.remove('modal-wrap_active');
+    document.getElementsByClassName('blur')[0].classList.remove('blur');
+    document.body.style.overflow = "auto";
+}

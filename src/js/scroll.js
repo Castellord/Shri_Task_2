@@ -3,6 +3,37 @@ let step;
 let promStep;
 let nextPosition;
 
+function scrollTo(element, to = 0, duration = 1000) {
+
+    const start = element.scrollLeft;
+    const change = to - start;
+    const increment = 20;
+    let currentTime = 0;
+
+    const animateScroll = (() => {
+
+        currentTime += increment;
+
+        const val = Math.easeInOutQuad(currentTime, start, change, duration);
+
+        element.scrollLeft = val;
+
+        if (currentTime < duration) {
+            setTimeout(animateScroll, increment);
+        }
+    });
+
+    animateScroll();
+};
+
+Math.easeInOutQuad = function(t, b, c, d) {
+
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+};
+
 
 function scrollNext(block, elem) {
 
@@ -20,8 +51,9 @@ function scrollNext(block, elem) {
     } else {
         nextPosition = promStep * step;
     }
+    scrollTo(container, nextPosition, 500);
 
-    container.scrollLeft = nextPosition;
+
 };
 
 function scrollPrev(block) {
@@ -41,7 +73,7 @@ function scrollPrev(block) {
     }
 
 
-    container.scrollLeft = nextPosition;
+    scrollTo(container, nextPosition, 500);
 };
 
 document.addEventListener('DOMContentLoaded', function() {
