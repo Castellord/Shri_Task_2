@@ -86,6 +86,7 @@
         display: inline-block;
         white-space: normal;
         margin: 0 10px 0px 0;
+        vertical-align: top;
     }
     .scroll-control {
         display: none;

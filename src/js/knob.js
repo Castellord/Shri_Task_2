@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     knobarea.ontouchstart = function(e) {
         let start = e.changedTouches[0].pageX;
+        console.log('touch');
         knobarea.ontouchmove = function(e) {
 
                 if (e.changedTouches[0].pageX > start) {
