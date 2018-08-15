@@ -60,6 +60,10 @@ header {
     cursor: pointer;
 }
 
+.header-menu__switcher {
+    display: none;
+}
+
 .header-menu__link_active {
     opacity: 1;
 }

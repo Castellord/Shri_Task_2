@@ -11,7 +11,30 @@
         margin: 21px 52px 0 0;
     }
     .header-menu {
-        display: none;
+        display: block;
+        position: absolute;
+        background: #fff;
+        top: -45px;
+        padding-top: 14px;
+        left: 0px;
+        padding-left: 20px;
+        z-index: 2;
+        width: 0px;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+    .header-menu_active {
+        width: 150px;
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+    }
+    .header-menu__link {
+        padding: 20px 20px 20px 0px;
+    }
+    .header-menu__switcher {
+        float: right;
+        margin-top: 27px;
+        cursor: pointer;
+        display: block;
     }
     .side-block_left {
         margin-left: 20px;
@@ -26,6 +49,8 @@
         padding: 21px 25px 0 20px;
         height: 282px;
         border-radius: 20px;
+        background-position: -117px -12px;
+        background-size: 628px;
     }
     .main-data__heading {
         font-size: 18px;
@@ -43,10 +68,10 @@
     }
     .favor-cards {
         position: absolute;
-        bottom: 18px;
+        bottom: 15px;
         right: 0px;
         width: 100%;
-        height: 122px;
+        height: 124px;
         box-sizing: border-box;
         padding-top: 0px;
         padding-left: 20px;
@@ -93,13 +118,13 @@
     }
     .device-filter {
         position: relative;
-        padding: 5px 0 0 20px;
+        padding: 10px 0 0 20px;
         margin-bottom: 19px;
     }
     .device-filter__wrap {
         position: absolute;
-        right: 0px;
-        top: 2px;
+        right: 11px;
+        top: 8px;
         background: #ffffff;
         z-index: 1;
         padding: 0px 9px 15px 0px;
@@ -113,7 +138,24 @@
     }
     .device-filter__item_active {
         display: block;
+        position: relative;
         margin-right: 0px;
+        padding-right: 31px;
+    }
+    .device-filter__item_active::after {
+        content: "";
+        position: absolute;
+        height: 14px;
+        width: 9px;
+        top: 8px;
+        right: 16px;
+        background: url('../img/arrow-down.svg');
+    }
+    .device-filter__item_show {
+        padding-right: 11px;
+    }
+    .device-filter__item_show::after {
+        display: none;
     }
     .favor-devices {
         width: 375px;

@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // add glow to 'active' ticks
         const actives = (Math.round(angle / 3 - 1));
-        console.log(actives);
+
         if (actives <= 0) {
             for (let tick of ticks.slice(0, 1)) {
                 tick.classList.add('active');
@@ -84,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     knobarea.ontouchstart = function(e) {
         let start = e.changedTouches[0].pageX;
-        console.log('touch');
         knobarea.ontouchmove = function(e) {
 
                 if (e.changedTouches[0].pageX > start) {
