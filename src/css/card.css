@@ -58,4 +58,5 @@
 
 .card_horisontal-filter-show {
     display: inline-block;
+    vertical-align: top;
 }
