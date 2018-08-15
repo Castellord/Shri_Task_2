@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // add glow to 'active' ticks
-        const actives = (Math.round(angle / 3 - 1));
+        const actives = (Math.round(angle / 2.6));
 
         if (actives <= 0) {
             for (let tick of ticks.slice(0, 1)) {
