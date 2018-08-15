@@ -8,7 +8,7 @@ Node v9.11.2
 
 Структура:
 - [Production-build проекта](./build)
-- index (./build/index.html)
+[index.html](./build/index.html)
 - [Исходники](./src)
 
 ## Запуск
