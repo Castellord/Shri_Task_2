@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     const knob = document.getElementsByClassName('knob__control')[0];
+    const knobarea = document.getElementsByClassName('knob')[0];
     const curr = document.getElementsByClassName('knob__value')[0];
     const ticks = Array.from(document.getElementsByClassName('tick'));
+    let centerX, centerY, mouseX, mouseY, actives, a, plusAngle;
 
     const min = 0;
     const max = 300;
@@ -16,25 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })();
 
-    function turntUp(bool) {
-        angle = (bool && angle + 2 <= max) ?
-            angle + 2 : (!bool && angle - 2 >= min) ?
-            angle - 2 : angle;
-        return setAngle();
-    }
-
     function setAngle() {
-        // rotate knob
         knob.style[transform] = `rotate(${angle}deg)`;
-
-        // quickly reset ticks
         for (let tick of ticks) {
             tick.classList.remove('active');
         }
-
-        // add glow to 'active' ticks
-        const actives = (Math.round(angle / 2.6));
-
+        actives = (Math.round(angle / 2.6));
         if (actives <= 0) {
             for (let tick of ticks.slice(0, 1)) {
                 tick.classList.add('active');
@@ -44,67 +33,59 @@ document.addEventListener('DOMContentLoaded', function() {
                 tick.classList.add('active');
             }
         }
-
-
-
-        // update % value as text
         curr.innerHTML = `+${Math.ceil(maxtemp/100*(Math.round(angle/max*100)))}`;
-
     }
 
-    const knobarea = document.getElementsByClassName('knob')[0];
+    Math.dist = function(x1, y1, x2, y2) {
+        if (!x2) x2 = 0;
+        if (!y2) y2 = 0;
+        return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+    }
 
-
-    knobarea.onmousedown = function(e) { // 1. отследить нажатие
-        let start = e.pageX;
-        document.onmousemove = function(e) {
-
-            if (e.pageX > start) {
-                turntUp(true);
-
+    const rightAngle = (centerX, centerY, mouseX, mouseY) => {
+        if (Math.dist(mouseX, mouseY, centerX, centerY) > 10) {
+            a = Math.atan2(mouseY - centerY, mouseX - centerX) * (180 / Math.PI);
+            if (a < 0) {
+                plusAngle = 360 + a;
             } else {
-                turntUp(false);
-
+                plusAngle = a;
             }
 
-            start = e.pageX;
-            const knobarea = document.getElementsByClassName('knob')[0];
-            document.onmouseup = function() {
-                document.onmousemove = null;
-                knobarea.onmouseup = null;
+            if (plusAngle > 0 && plusAngle < 120) {
+                angle = plusAngle + 240;
+            } else {
+                angle = plusAngle - 120;
             }
-
-            knob.ondragstart = function() {
-                return false;
-            };
-
+            if (angle > 0 && angle <= 303) {
+                return setAngle(angle);
+            }
         }
     }
 
-
-    knobarea.ontouchstart = function(e) {
-        let start = e.changedTouches[0].pageX;
-        knobarea.ontouchmove = function(e) {
-
-                if (e.changedTouches[0].pageX > start) {
-                    turntUp(true);
-                } else {
-                    turntUp(false);
-                }
-
-                start = e.changedTouches[0].pageX;
-            } //   alert(e.changedTouches[0].pageX) // показ коррдинат места прикосновения по X-у.
+    knobarea.onmousedown = function(e) { // 1. отследить нажатие
+        centerX = knobarea.getBoundingClientRect().left + knobarea.clientWidth / 2;
+        centerY = knobarea.getBoundingClientRect().top + knobarea.clientHeight / 2;
+        document.onmousemove = function(event) {
+            mouseX = window.event.clientX;
+            mouseY = window.event.clientY;
+            rightAngle(centerX, centerY, mouseX, mouseY);
+        }
+        document.onmouseup = function() {
+            document.onmousemove = null;
+            knobarea.onmouseup = null;
+        }
+        knobarea.ondragstart = function() {
+            return false;
+        }
     }
 
+    knobarea.ontouchstart = function(e) {
+        centerX = knobarea.getBoundingClientRect().left + knobarea.clientWidth / 2;
+        centerY = knobarea.getBoundingClientRect().top + knobarea.clientHeight / 2;
+        document.ontouchmove = function(event) {
+            mouseX = event.changedTouches[0].clientX;
+            mouseY = event.changedTouches[0].clientY;
+            rightAngle(centerX, centerY, mouseX, mouseY);
+        }
+    }
 }, false);
-
-// function getCurCoordsInsideRect(e) {
-//     var x = e.offsetX == undefined ? e.layerX : e.offsetX;
-//     var y = e.offsetY == undefined ? e.layerY : e.offsetY;
-
-//     alert(x + 'x' + y);
-// }
-
-// function getElement(e, element) {
-//     getCurCoordsInsideRect(e, element);
-// }
