@@ -5,6 +5,7 @@
 .side-block_left {
     float: left;
     margin-left: 40px;
+    overflow: hidden;
 }
 
 .side-block__heading {
@@ -70,6 +71,10 @@
     box-sizing: border-box;
     padding-top: 20px;
     overflow-y: scroll;
+}
+
+.favor-cards::-webkit-scrollbar {
+    display: none;
 }
 
 .arrow-reminder {
